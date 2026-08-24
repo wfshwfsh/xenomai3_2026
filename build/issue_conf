@@ -5,6 +5,7 @@ scripts/config --set-str SYSTEM_REVOCATION_KEYS ""
 # 2. 关闭模块签名校验（避免后续模块编译再找私钥）
 scripts/config --disable CONFIG_MODULE_SIG
 scripts/config --disable CONFIG_MODULE_SIG_ALL
+scripts/config --disable CONFIG_DEBUG_INFO_BTF
 
 # 3. 刷新生效配置
 make olddefconfig
