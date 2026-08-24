@@ -1,0 +1,5 @@
+cd build/xenomai
+
+./scripts/prepare-kernel.sh \
+    --linux=../linux-dovetail \
+    --arch=x86 

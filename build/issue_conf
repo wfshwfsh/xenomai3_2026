@@ -1,0 +1,10 @@
+# 1. 清空受信任和吊销证书的路径字符串
+scripts/config --set-str SYSTEM_TRUSTED_KEYS ""
+scripts/config --set-str SYSTEM_REVOCATION_KEYS ""
+
+# 2. 关闭模块签名校验（避免后续模块编译再找私钥）
+scripts/config --disable CONFIG_MODULE_SIG
+scripts/config --disable CONFIG_MODULE_SIG_ALL
+
+# 3. 刷新生效配置
+make olddefconfig
